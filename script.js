@@ -28,40 +28,30 @@ function generatePassword() {
 
   let passwordChoice = parseInt(userOptions);
 
+  let wantsNumbers = false;
+  let wantsLowercase = false;
+  let wantsUppercase = false;
+  let wantsSpecialCharacters = false;
+
+
   if (window.confirm("Do you want numbers in your password?")) {
     wantsNumbers = true
   }
-  else {
-    wantsNumbers = false
-  }
-
   if (window.confirm("Do you want lowercase letters in your password?")) {
     wantsLowercase = true
   }
-  else {
-    wantsLowercase = false
-  }
-
   if (window.confirm("Do you want uppercase letters in your password?")) {
     wantsUppercase = true
   }
-  else {
-    wantsUppercase = false
-  }
-
   if (window.confirm("Do you want special characters in your password?")) {
     wantsSpecialCharacters = true
   }
-  else {
-    wantsSpecialCharacters = false
-  }
-
   if (wantsNumbers) {
     characters = characters.concat(numbers) 
   }
-  
+  let characters = [];
   if (wantsLowercase) {
-    characters = characters.concat(alphabetLowCase)
+    characters = characters.concat(alphabetLowerCase)
   }
 
   if (wantsUppercase) {
