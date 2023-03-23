@@ -8,4 +8,4 @@ Short discription explaining the what, motivation, why, and how of my project:
 - My motivation was to create code using javascript that could manipulate the webpage into doing and meeting certain criteria.
 - 
 
-![Alt text](../password-generator/assets/image/password-generator-image.PNG"screenshot of my project")
+![](/assets/image/password-generator-image.PNG)
