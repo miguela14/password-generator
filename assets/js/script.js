@@ -32,6 +32,10 @@ function generatePassword() {
   let wantsUppercase = false;
   let wantsSpecialCharacters = false;
 
+  if(!userOptions){
+    return;
+  }
+
   if (isNaN(passwordChoice) || passwordChoice < 8 || passwordChoice > 128) {
    alert("Invalid input! Password length must be a number from 8 to 128.");
     return;
