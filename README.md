@@ -9,3 +9,5 @@ Short discription explaining the what, motivation, and how of my project:
 - By creating javascript declaring variables with the appropriate functions, adding proper if statements as well as using forloops
 
 ![](/assets/image/password-generator-image.PNG)
+
+[https://miguela14.github.io/password-generator/]
