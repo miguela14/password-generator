@@ -14,12 +14,80 @@
 //store promts as var, at end run if statments 
 
 // Assignment Code
-var generateBtn = document.querySelector("#generate");
+let generateBtn = document.querySelector("#generate");
+ 
+let specialChar = ["!", ".", "/", "$", "%", "^", "&", "*", "<", ">", "-", "+", ","];
+let numbers = [1,2,3,4,5,6,7,8,9,0];
+let alphabetLowCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+let alphabetUpperCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+
+
+function generatePassword() {
+  
+  let userOptions = window.prompt("Enter a number for length of password from 8 to 128.");
+
+  let passwordChoice = parseInt(userOptions);
+
+  if (window.confirm("Do you want numbers in your password?")) {
+    wantsNumbers = true
+  }
+  else {
+    wantsNumbers = false
+  }
+
+  if (window.confirm("Do you want lowercase letters in your password?")) {
+    wantsLowercase = true
+  }
+  else {
+    wantsLowercase = false
+  }
+
+  if (window.confirm("Do you want uppercase letters in your password?")) {
+    wantsUppercase = true
+  }
+  else {
+    wantsUppercase = false
+  }
+
+  if (window.confirm("Do you want special characters in your password?")) {
+    wantsSpecialCharacters = true
+  }
+  else {
+    wantsSpecialCharacters = false
+  }
+
+  if (wantsNumbers) {
+    characters = characters.concat(numbers) 
+  }
+  
+  if (wantsLowercase) {
+    characters = characters.concat(alphabetLowCase)
+  }
+
+  if (wantsUppercase) {
+    characters = characters.concat(alphabetUpperCase)
+  }
+
+  if (wantsSpecialCharacters) {
+    characters = characters.concat(specialChar)
+  }
+  
+  }
+
+// [Math.floor(Math.random() * choices.length)];
+
+//take 8 to 128 and for loop through those numbers
+/*take math.random on charactes for the amount of time that the user put in
+  "if user wants ten numbers, generate 10 random index for the array"
+*/
+
+  return (characters);
+}
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  let password = generatePassword();
+  let passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 
